@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+// 1. Definição da "Classe" (Atributos)
+typedef struct {
+    char titular[50];
+    double saldo;
+    
+    // Simulação de método via ponteiro de função
+    void (*depositar)(void* self, double valor);
+} ContaBancaria;
+
+// 2. Implementação do Método
+void depositar_implementacao(void* self, double valor) {
+    // Casting do ponteiro genérico para o tipo da struct
+    ContaBancaria* conta = (ContaBancaria*)self;
+    conta->saldo += valor;
+    printf("Depositado: R$ %.2f | Novo Saldo: R$ %.2f\n", valor, conta->saldo);
+}
+
+// 3. "Construtor" (Inicializador)
+void nova_conta(ContaBancaria* conta, const char* nome, double saldo_inicial) {
+    strcpy(conta->titular, nome);
+    conta->saldo = saldo_inicial;
+    conta->depositar = depositar_implementacao; // Atribui a função ao ponteiro
+}
+
+int main() {
+    ContaBancaria minhaConta;
+
+    // Inicializando o objeto
+    nova_conta(&minhaConta, "Rodrigo", 1000.00);
+
+    printf("Titular: %s | Saldo Inicial: R$ %.2f\n", minhaConta.titular, minhaConta.saldo);
+
+    // Chamando o "método"
+    minhaConta.depositar(&minhaConta, 500.50);
+
+    return 0;
+}
