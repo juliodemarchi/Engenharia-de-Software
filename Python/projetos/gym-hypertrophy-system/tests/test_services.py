@@ -1,6 +1,5 @@
 import unittest
-# Importando as classes do seu sistema de Engenharia de Software
-from app.domain.models import Exercicio, PlanoTreino
+from app.domain.models import Exercicio
 from app.domain.services import ProgressaoService
 
 class TestGymSystem(unittest.TestCase):
