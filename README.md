@@ -47,10 +47,10 @@ Cada pasta abaixo representa uma trilha de aprendizagem específica dentro da gr
 * **Descrição:** Projetos transversais e atividades de extensão obrigatórias.
 * **Conteúdo:** Projetos práticos que unem diversas disciplinas e entregas de portfólio.
 
-### 🐘 [PHP](./PHP/)
-* **Descrição:** Desenvolvimento de aplicações server-side e sistemas dinâmicos para a web.
-* **Conteúdo:** Sintaxe da linguagem, manipulação de formulários, integração com bancos de dados MySQL e arquitetura MVC.
-* **Contexto:** Disciplinas de Programação Web e desenvolvimento de sistemas legados e modernos.
+### 🧱 [HTML-Studies](./HTML-Studies/)
+* **Descrição:** Estruturação de documentos para a Web e acessibilidade digital.
+* **Conteúdo:** Semântica HTML5, formulários avançados, estruturação de tabelas, integração de mídia e boas práticas de SEO.
+* **Contexto:** Disciplinas de Desenvolvimento Web, Interface Homem-Computador (IHC) e Projetos de Extensão.
 
 ---
 
